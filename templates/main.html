@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Sistema predicción de ventas - BigMart</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css2/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link rel="icon" href="../static/img/favicon.ico" type="image/x-icon" />
+
+
+</head>
+
+<body>
+  <nav class="black" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">BigMart</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">Login</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Predictor de ventas de producto por tiempo</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predice las ventas de cada producto en un punto de venta particular
+        <br>
+        </h5>
+      </div>
+
+  <div class="row">
+    <form action='/predecir' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="first_name"><b>Peso del producto</b></label>
+            <br>
+          <input placeholder="Peso del producto" name="peso" id="first_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="last_name"><b>Categoria del producto</b></label>
+            <br>
+          <input id="last_name" name="categoria" placeholder="Categoria del producto"  type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="_name"><b>Tipo del producto</b></label>
+            <br>
+          <input id="_name" name="tipo_producto" placeholder="Tipo del producto" type="text" class="validate">
+
+        </div>
+
+         <div class="input-field col s4">
+            <label for="first_name"><b>Visibilidad del producto</b></label>
+            <br>
+          <input placeholder="Visibilidad del producto" name="visibilidad" id="first_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="last_name"><b>Producto MRP </b></label>
+            <br>
+          <input id="last_name" name="mrp" placeholder="Precio minorista del producto"  type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="_name"><b>Contenido graso del producto</b></label>
+            <br>
+          <input id="_name" name="contenido" placeholder="El producto es bajo en grasa" type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+          <label for="first_name"><b>Tamaño de tienda</b></label>
+            <br>
+          <input placeholder="Tamaño de tienda" name="tamano_tienda" id="first_name" type="text" class="validate">
+        </div>
+
+          <div class="input-field col s4">
+            <label for="first_name"><b>Locacion de la tienda</b></label>
+            <br>
+          <input placeholder="Locacion de kla tienda" name="locacion_tiempo" id="first_name" type="text" class="validate">
+        </div>
+
+         <div class="input-field col s4">
+            <label for="first_name"><b>Tipo de tienda</b></label>
+            <br>
+          <input placeholder="Tamaño de tienda" name="tipo_tienda" id="first_name" type="text" class="validate">
+        </div>
+
+
+        <div class="input-field col s4">
+
+          <label for="last_name"><b>Años de establecimiento de la tienda </b></label>
+            <br>
+          <input id="last_name" name="anios_establecimientos" placeholder="Años de establecimiento de la tienda"  type="text" class="validate">
+
+        </div>
+
+        </div>
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predecir las ventas</button>
+      </div>
+    </form>
+      </div>
+
+       <div class="row center">
+        <h5 class="header col s12 light">{{pred}}
+        <br>
+        </h5>
+      </div>
+
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Acerca de BigMart</h5>
+          <p class="grey-text text-lighten-4">Bigmart es una empresa del sector retail, principalmente el giro del negocio de los supermercados consiste en la rotación del inventario, puesto que a mayor rotación del mismo implica mayores beneficios para la entidad. La misión de Bigmart consiste en trabajar, día a día, para llegar a ser el retailer más rentable y prestigioso de América Latina, en base a la excelencia en nuestra calidad del servicio, el respeto a las comunidades con las que convivimos y el compromiso de nuestro equipo de cola</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">CASO PROPUESTO - 02</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Predicción</a></li>
+            <li><a class="white-text" href="#!">De</a></li>
+            <li><a class="white-text" href="#!">Ventas</a></li>
+            <li><a class="white-text" href="#!">Productos</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Integrantes</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Alvarado Alva , Emily </a></li>
+            <li><a class="white-text" href="#!">Rojas Gallegos, Cristian</a></li>
+            <li><a class="white-text" href="#!">Valdera Sandoval, Myrella</a></li>
+            <li><a class="white-text" href="#!">Vasquez Fernandez, Jordan</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com">GRUPO Nro 3  MINERÍA DE DATOS Y BIG DATA - USAT</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
+
